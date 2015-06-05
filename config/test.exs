@@ -12,7 +12,7 @@ config :logger, level: :warn
 # Configure your database
 config :agile_coach_campex, AgileCoachCampex.Repo,
   adapter: Ecto.Adapters.Postgres,
-  username: "postgres",
-  password: "postgres",
+  username: "elixir",
+  password: "elixir",
   database: "agile_coach_campex_test",
   size: 1 # Use a single connection for transactional tests

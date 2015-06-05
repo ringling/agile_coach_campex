@@ -29,7 +29,7 @@ config :logger, :console, format: "[$level] $message\n"
 # Configure your database
 config :agile_coach_campex, AgileCoachCampex.Repo,
   adapter: Ecto.Adapters.Postgres,
-  username: "postgres",
-  password: "postgres",
+  username: "elixir",
+  password: "elixir",
   database: "agile_coach_campex_dev",
   size: 10 # The amount of database connections in the pool
