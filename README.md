@@ -23,3 +23,13 @@ sudo apt-get install -y nodejs
 # Install inotify-tools
 sudo apt-get install inotify-tool
 ```
+
+## Setup Docker PostgreSQL
+
+```
+docker run --name postgresql -p 5432:5432 -d -v /<LOCALPATH>/postgres/data:/var/lib/postgresql sameersbn/postgresql:9.4
+docker exec -it postgresql sudo -u postgres createuser -P -d -r -s elixir
+docker exec -it postgresql sudo -u postgres createdb -O elixir agile_coach_campex_test
+docker exec -it postgresql sudo -u postgres createdb -O elixir agile_coach_campex_dev
+docker exec -it postgresql sudo -u postgres createdb -O elixir agile_coach_campex_prod
+```
