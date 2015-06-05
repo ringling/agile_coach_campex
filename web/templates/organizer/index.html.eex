@@ -1,32 +1,85 @@
-<h2>Listing organizers</h2>
+<div class="well organizers">
+  <div class="well inner">
+    <h2>The people behind ACCDK</h2>
+    <p>Even an unconference needs organizers – and those of us putting together Agile Coach Camp Denmark love what we do.</p>
+    <p>For years, we had been talking about how to have a great Agile conference in Denmark. After attending some of the coolest conferences in Europe, we came upon the Agile Coach Camp concept, and the rest is history. In 2012, we held our first Agile Coach Camp in Denmark.</p>
+    <p>You can read more about us <a href="http://www.goagile.dk/om-goagile" target="_blank">here.</a></p>
+    <p>We look forward to seeing you!</p>
+  </div>
+</div>
 
-<table class="table">
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Email</th>
-      <th>Phone</th>
-      <th>PictureUrl</th>
+<div class="well">
+  <div class="row">
+    <div class="box_cont">
 
-      <th></th>
-    </tr>
-  </thead>
-  <tbody>
-<%= for organizer <- @organizers do %>
-    <tr>
-      <td><%= organizer.name %></td>
-      <td><%= organizer.email %></td>
-      <td><%= organizer.phone %></td>
-      <td><%= organizer.picture_url %></td>
 
-      <td class="text-right">
-        <%= link "Show", to: organizer_path(@conn, :show, organizer), class: "btn btn-default btn-xs" %>
-        <%= link "Edit", to: organizer_path(@conn, :edit, organizer), class: "btn btn-default btn-xs" %>
-        <%= link "Delete", to: organizer_path(@conn, :delete, organizer), method: :delete, class: "btn btn-danger btn-xs" %>
-      </td>
-    </tr>
-<% end %>
-  </tbody>
-</table>
+      <div class="col-lg-6">
+        <div class="well" style="background-color: rgb(190,213,219);">
+          <div class="row">
+            <div class="col-md-6">
+              <img class="org-image" src="http://www.goagile.dk/images/12%20louise0883%20copy%20Kopier.jpg">
+            </div>
+            <div class="col-md-6">
+              <h2>Louise Navntoft</h2>
+              <ul class="list-unstyled">
+                <li>louise@goagile.dk</li>
+                <li>P: + 45 27 12 38 87</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
 
-<%= link "New organizer", to: organizer_path(@conn, :new) %>
+      <div class="col-lg-6">
+        <div class="well">
+          <div class="row">
+            <div class="col-md-6">
+              <img class="org-image" src="http://www.goagile.dk/images/13%20ole0779%20copy%20Kopier.jpg">
+            </div>
+            <div class="col-md-6">
+              <h2>Ole Jepsen</h2>
+              <ul class="list-unstyled">
+                <li>ole@goagile.dk</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="box_cont">
+      <div class="col-lg-6">
+        <div class="well">
+          <div class="row">
+            <div class="col-md-6">
+              <img class="org-image" src="http://www.goagile.dk/images/13%20ole0779%20copy%20Kopier.jpg">
+            </div>
+            <div class="col-md-6">
+              <h2>Jenni Jepsen</h2>
+              <ul class="list-unstyled">
+                <li>jenni@goagile.dk</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="well">
+          <div class="row">
+            <div class="col-md-6">
+              <img class="org-image" src="...">
+            </div>
+            <div class="col-md-6">
+              <h2>Thomas Ringling</h2>
+              <ul class="list-unstyled">
+                <li>thomas.ringling@gmail.com</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
