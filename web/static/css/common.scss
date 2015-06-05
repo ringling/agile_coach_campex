@@ -45,15 +45,6 @@ h2 {
   border: 1px solid #c6c6bc;
 }
 
-.next_year {
-  min-height: 700px;
-  border-radius: 4px;
-  background-color: #ffffff;
-  background-image: url("/images/accdk_2015_end_fading.png");
-  background-position: center center;
-  background-repeat: no-repeat;
-}
-
 .navbar-default .navbar-nav > .active > a {
   color: black;
   background-color: #ffffff;
@@ -61,13 +52,4 @@ h2 {
 
 .navbar-default .navbar-nav {
   font-size: 1.2em;
-}
-
-.latest_accdk_pic {
-  width: 960px;
-  height: 452px;
-  display: inline-block;
-  margin-bottom: 1em;
-  background-image: url("/images/accdk_2015_end_fading.png");
-  background-size: 960px 452px;
 }

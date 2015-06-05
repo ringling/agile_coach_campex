@@ -1,9 +1,10 @@
-<div class="jumbotron next_year">
-  <p>See you</p>
+<div class="jumbotron date">
+  <p>See you :)</p>
   <h1>June 2-4 2016</h1>
-<!--   <div class="pager">
-    <span class="latest_accdk_pic"></span>
-  </div> -->
+</div>
+
+<div class="jumbotron next_year">
+
 </div>
 
 <div class="row">

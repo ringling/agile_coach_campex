@@ -3,6 +3,22 @@
   visibility: hidden;
 }
 
-.next_year h1 {
+.next_year {
+  min-height: 600px;
+  border-radius: 4px;
+  background-color: #ffffff;
+  background-image: url("/images/accdk_2015_end_fading.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.date {
+  background-color: #ffffff;
+  border-radius: 4px;
+}
+
+.date h1 {
   color: #569bbe;
 }
+
+

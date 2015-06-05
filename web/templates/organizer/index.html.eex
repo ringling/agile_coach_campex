@@ -11,8 +11,6 @@
 <div class="well">
   <div class="row">
     <div class="box_cont">
-
-
       <div class="col-lg-6">
         <div class="well" style="background-color: rgb(190,213,219);">
           <div class="row">
@@ -22,6 +20,7 @@
             <div class="col-md-6">
               <h2>Louise Navntoft</h2>
               <ul class="list-unstyled">
+                <li><b>Primary contact</b></li>
                 <li>louise@goagile.dk</li>
                 <li>P: + 45 27 12 38 87</li>
               </ul>
@@ -53,7 +52,7 @@
         <div class="well">
           <div class="row">
             <div class="col-md-6">
-              <img class="org-image" src="http://www.goagile.dk/images/13%20ole0779%20copy%20Kopier.jpg">
+              <img class="org-image" src="http://www.goagile.dk/images/11%20jenny0664%20copy%20Kopier.jpg">
             </div>
             <div class="col-md-6">
               <h2>Jenni Jepsen</h2>
@@ -68,7 +67,7 @@
         <div class="well">
           <div class="row">
             <div class="col-md-6">
-              <img class="org-image" src="...">
+              <img class="org-image" style="height: auto; width: 65%;" src="/images/thomas_ringling.jpg">
             </div>
             <div class="col-md-6">
               <h2>Thomas Ringling</h2>
@@ -81,5 +80,38 @@
       </div>
 
     </div>
+
+        <div class="box_cont">
+      <div class="col-lg-6">
+        <div class="well">
+          <div class="row">
+            <div class="col-md-6">
+              <img class="org-image" style="height: auto; width: 65%;" src="http://accdk.org/assets/best_brains-3150e7e6601d782feca0fc4316dfb347.png">
+            </div>
+            <div class="col-md-6">
+              <h2>Best Brains</h2>
+              <ul class="list-unstyled">
+                <li>info@bestbrains.dk</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="well">
+          <div class="row">
+            <div class="col-md-6">
+            </div>
+            <div class="col-md-6">
+              <h2>agilelean.dk</h2>
+              <ul class="list-unstyled">
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
   </div>
 </div>
