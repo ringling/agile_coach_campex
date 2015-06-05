@@ -1,0 +1,27 @@
+<h2>Show organizer</h2>
+
+<ul>
+
+  <li>
+    <strong>Name:</strong>
+    <%= @organizer.name %>
+  </li>
+
+  <li>
+    <strong>Email:</strong>
+    <%= @organizer.email %>
+  </li>
+
+  <li>
+    <strong>Phone:</strong>
+    <%= @organizer.phone %>
+  </li>
+
+  <li>
+    <strong>PictureUrl:</strong>
+    <%= @organizer.picture_url %>
+  </li>
+
+</ul>
+
+<%= link "Back", to: organizer_path(@conn, :index) %>

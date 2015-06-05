@@ -23,9 +23,9 @@
             </a>
           </div>
           <ul class="nav navbar-nav">
-        <li class="active"><a href="#">Home<span class="sr-only">(current)</span></a></li>
-        <li style="visibility: hidden"><a href="#">Organizers<span class="sr-only">(current)</span></a></li>
-        <li style="visibility: hidden"><a href="#">Attendees<span class="sr-only">(current)</span></a></li>
+        <li class="<%= menu_class(@conn, 'page') %>"><a href="<%= page_path(@conn, :index) %>">Home<span class="sr-only">(current)</span></a></li>
+        <li class="<%= menu_class(@conn, 'organizer') %>"><a href="<%= organizer_path(@conn, :index) %>">Organizers<span class="sr-only">(current)</span></a></li>
+        <li class="<%= menu_class(@conn, 'attendee') %>"style="visibility: hidden"><a href="#">Attendees<span class="sr-only">(current)</span></a></li>
         </div>
       </nav>
 

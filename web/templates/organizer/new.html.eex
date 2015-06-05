@@ -1,0 +1,6 @@
+<h2>New organizer</h2>
+
+<%= render "form.html", changeset: @changeset,
+                        action: organizer_path(@conn, :create) %>
+
+<%= link "Back", to: organizer_path(@conn, :index) %>

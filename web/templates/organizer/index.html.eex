@@ -1,0 +1,32 @@
+<h2>Listing organizers</h2>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Phone</th>
+      <th>PictureUrl</th>
+
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<%= for organizer <- @organizers do %>
+    <tr>
+      <td><%= organizer.name %></td>
+      <td><%= organizer.email %></td>
+      <td><%= organizer.phone %></td>
+      <td><%= organizer.picture_url %></td>
+
+      <td class="text-right">
+        <%= link "Show", to: organizer_path(@conn, :show, organizer), class: "btn btn-default btn-xs" %>
+        <%= link "Edit", to: organizer_path(@conn, :edit, organizer), class: "btn btn-default btn-xs" %>
+        <%= link "Delete", to: organizer_path(@conn, :delete, organizer), method: :delete, class: "btn btn-danger btn-xs" %>
+      </td>
+    </tr>
+<% end %>
+  </tbody>
+</table>
+
+<%= link "New organizer", to: organizer_path(@conn, :new) %>
