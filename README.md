@@ -21,7 +21,7 @@ curl -sL https://deb.nodesource.com/setup_0.12 | sudo bash -
 sudo apt-get install -y nodejs
 
 # Install inotify-tools
-sudo apt-get install inotify-tool
+sudo apt-get install inotify-tools
 ```
 
 ## Setup Docker PostgreSQL
