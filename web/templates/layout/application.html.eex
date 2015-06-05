@@ -8,17 +8,26 @@
     <meta name="author" content="">
 
     <title>Hello Phoenix!</title>
+    <link href="http://fonts.googleapis.com/css?family=Exo+2:400,700" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="<%= static_path(@conn, "/css/app.css") %>">
   </head>
 
   <body>
-    <div class="container" role="main">
-      <div class="header">
-        <ul class="nav nav-pills pull-right">
-          <li><a href="http://www.phoenixframework.org/docs">Get Started</a></li>
-        </ul>
-        <span class="logo"></span>
-      </div>
+    <div class="acc_container" role="main">
+
+      <nav class="navbar navbar-default">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <a class="navbar-brand" href="#">
+              Agile Coach Camp
+            </a>
+          </div>
+          <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Home<span class="sr-only">(current)</span></a></li>
+        <li style="visibility: hidden"><a href="#">Organizers<span class="sr-only">(current)</span></a></li>
+        <li style="visibility: hidden"><a href="#">Attendees<span class="sr-only">(current)</span></a></li>
+        </div>
+      </nav>
 
       <p class="alert alert-info" role="alert"><%= get_flash(@conn, :info) %></p>
       <p class="alert alert-danger" role="alert"><%= get_flash(@conn, :error) %></p>
