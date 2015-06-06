@@ -12,7 +12,7 @@ defmodule AgileCoachCampex.OrganizerControllerTest do
 
   test "lists all entries on index", %{conn: conn} do
     conn = get conn, organizer_path(conn, :index)
-    assert html_response(conn, 200) =~ "Listing organizers"
+    assert html_response(conn, 200) =~ "The people behind ACCDK"
   end
 
   test "renders form for new resources", %{conn: conn} do

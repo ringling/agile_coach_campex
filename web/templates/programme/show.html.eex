@@ -1,0 +1,12 @@
+<h2>Show programme</h2>
+
+<ul>
+
+  <li>
+    <strong>Year:</strong>
+    <%= @programme.year %>
+  </li>
+
+</ul>
+
+<%= link "Back", to: programme_path(@conn, :index) %>

@@ -17,6 +17,7 @@ defmodule AgileCoachCampex.Router do
 
     get "/", PageController, :index
     resources "/organizers", OrganizerController
+    resources "/programmes", ProgrammeController
   end
 
   # Other scopes may use custom stacks.

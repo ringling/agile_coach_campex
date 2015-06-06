@@ -5,8 +5,10 @@ defmodule AgileCoachCampex.LayoutView do
     state(conn.private.phoenix_controller, type)
   end
 
-  def state(AgileCoachCampex.OrganizerController, 'organizer'), do: 'active'
-  def state(AgileCoachCampex.PageController, 'page'), do: 'active'
-  def state(_, _), do: ""
+  def state(controller, type) do 
+    {:ok, regex} = type |> Regex.compile
+    ctrl_str = controller |> Atom.to_string |> String.downcase
+    if Regex.match?(regex, ctrl_str), do: "active", else: ""
+  end
 
 end

@@ -1,0 +1,26 @@
+<h2>Listing programmes</h2>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Year</th>
+
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<%= for programme <- @programmes do %>
+    <tr>
+      <td><%= programme.year %></td>
+
+      <td class="text-right">
+        <%= link "Show", to: programme_path(@conn, :show, programme), class: "btn btn-default btn-xs" %>
+        <%= link "Edit", to: programme_path(@conn, :edit, programme), class: "btn btn-default btn-xs" %>
+        <%= link "Delete", to: programme_path(@conn, :delete, programme), method: :delete, class: "btn btn-danger btn-xs" %>
+      </td>
+    </tr>
+<% end %>
+  </tbody>
+</table>
+
+<%= link "New programme", to: programme_path(@conn, :new) %>
