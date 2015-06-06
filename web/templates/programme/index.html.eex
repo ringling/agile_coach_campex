@@ -1,26 +1,57 @@
-<h2>Listing programmes</h2>
+<div class="well programmes">
+  <div class="well inner">
+    <h2>Programme 2015</h2>
+  </div>
 
-<table class="table">
-  <thead>
-    <tr>
-      <th>Year</th>
+  <div class="row">
+    <div class="box_cont">
+      <div class="col-lg-4">
+        <div class="well inner">
+          <h2>The 28th</h2>
+          <ul class="list-unstyled">
+            <li><b>16.00</b> Snacks and soda/beer</li>
+            <li><b>16.20</b> Welcome</li>
+            <li><b>17.30</b> Market place</li>
+            <li><b>18.00</b> Open space sessions</li>
+            <li><b>20.00</b> Dinner</li>
+            <li>Hang out - all games and ideas are more than welcome</li>
+            <li>Yoga/mindfulness</li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <div class="well inner">
+          <h2>The 29th</h2>
+          <ul class="list-unstyled">
+            <li><b>08.00</b> Professional outdoor training with Linnea Moss</li>
+            <li><b>09.00</b> Breakfast/shower</li>
+            <li><b>10.00</b> Market place</li>
+            <li><b>10.30-12.30</b> Open space sessions</li>
+            <li><b>12.30-13.30</b> lunch</li>
+            <li><b>13.30-14.25</b> Event for everybody</li>
+            <li><b>14.30</b> Open space sessions</li>
+            <li><b>16.30</b> Coffee/tea</li>
+            <li><b>17.00</b> Open space sessions</li>
+            <li><b>18.00-19.00</b> Fun and networking</li>
+            <li><b>19.00</b> Dinner</li>
+            <li><b>22.00</b> Surprise</li>
+          </ul>
+        </div>
+      </div>
 
-      <th></th>
-    </tr>
-  </thead>
-  <tbody>
-<%= for programme <- @programmes do %>
-    <tr>
-      <td><%= programme.year %></td>
-
-      <td class="text-right">
-        <%= link "Show", to: programme_path(@conn, :show, programme), class: "btn btn-default btn-xs" %>
-        <%= link "Edit", to: programme_path(@conn, :edit, programme), class: "btn btn-default btn-xs" %>
-        <%= link "Delete", to: programme_path(@conn, :delete, programme), method: :delete, class: "btn btn-danger btn-xs" %>
-      </td>
-    </tr>
-<% end %>
-  </tbody>
-</table>
-
-<%= link "New programme", to: programme_path(@conn, :new) %>
+      <div class="col-lg-4">
+        <div class="well inner">
+          <h2>The 30th</h2>
+          <ul class="list-unstyled">
+            <li><b>08.00</b> Professional outdoor training with Linnea Moss</li>
+            <li><b>09.00</b> Breakfast/shower</li>
+            <li><b>10.00</b> Look at Market place</li>
+            <li><b>10.30-12.30</b> Open space sessions</li>
+            <li><b>12.30-13.30</b> Group hug and goodbye</li>
+            <li><b>13.30</b> Lunch</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
