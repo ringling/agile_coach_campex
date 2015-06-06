@@ -7,7 +7,7 @@ defmodule AgileCoachCampex.ProgrammeController do
   plug :action
 
   def index(conn, _params) do
-    programmes = Repo.all(Programme)
+    programmes = []
     render(conn, "index.html", programmes: programmes)
   end
 
