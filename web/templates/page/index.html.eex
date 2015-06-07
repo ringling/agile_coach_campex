@@ -1,10 +1,8 @@
-<div class="jumbotron date">
-  <p>See you :)</p>
-  <h1>June 2-4 2016</h1>
-</div>
-
-<div class="jumbotron next_year">
-
+<div class="well date">
+  <div class="well inner text-center">
+      <h2>See you :)</h2>
+      <h1>June 2-4 2016</h1>
+  </div>
 </div>
 
 <div class="row">
