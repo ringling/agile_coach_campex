@@ -1,0 +1,12 @@
+<h2>Show signup_opened_notification</h2>
+
+<ul>
+
+  <li>
+    <strong>Email:</strong>
+    <%= @signup_opened_notification.email %>
+  </li>
+
+</ul>
+
+<%= link "Back", to: admin_signup_opened_notification_path(@conn, :index) %>

@@ -14,10 +14,14 @@ defmodule AgileCoachCampex.Router do
 
   scope "/", AgileCoachCampex do
     pipe_through :browser # Use the default browser stack
-
-    get "/", PageController, :index
+    resources "/", PageController, only: [:index, :create]
     resources "/organizers", OrganizerController
     resources "/programs", ProgrammeController
+  end
+
+  scope "/admin", AgileCoachCampex.Admin, as: :admin do
+    pipe_through :browser
+    resources "/signup_opened_notifications", SignupOpenedNotificationController, only: [:index, :create, :new, :delete]
   end
 
   # Other scopes may use custom stacks.

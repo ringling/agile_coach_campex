@@ -1,6 +1,7 @@
 defmodule AgileCoachCampex.PageControllerTest do
   use AgileCoachCampex.ConnCase
 
+
   test "GET /" do
     conn = get conn(), "/"
     assert html_response(conn, 200) =~ "Agile Coach Camp"
@@ -9,5 +10,10 @@ defmodule AgileCoachCampex.PageControllerTest do
   test "GET /organizers" do
     conn = get conn(), "/organizers"
     assert html_response(conn, 200) =~ "Agile Coach Camp"
+  end
+
+  test "has signup opened form" do
+    conn = get conn(), "/"
+    assert html_response(conn, 200) =~ "Be the first to know"
   end
 end

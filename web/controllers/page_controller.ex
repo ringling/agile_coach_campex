@@ -4,6 +4,21 @@ defmodule AgileCoachCampex.PageController do
   plug :action
 
   def index(conn, _params) do
-    render conn, "index.html"
+    changeset = AgileCoachCampex.SignupOpenedNotification.changeset(%AgileCoachCampex.SignupOpenedNotification{})
+    render(conn, "index.html", changeset: changeset)
   end
+
+  def create(conn, %{"signup_opened_notification" => signup_opened_notification_params}) do
+    changeset = AgileCoachCampex.SignupOpenedNotification.changeset(%AgileCoachCampex.SignupOpenedNotification{}, signup_opened_notification_params)
+    if changeset.valid? do
+      son = Repo.insert(changeset)
+
+      conn
+      |> put_flash(:info, "You will be notified on e-mail '#{son.email}',  when sign-up opens.")
+      |> redirect(to: page_path(conn, :index))
+    else
+      render(conn, "index.html", changeset: changeset)
+    end
+  end
+
 end
