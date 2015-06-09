@@ -56,12 +56,12 @@ defmodule AgileCoachCampex.Admin.SignupOpenedNotificationController do
     end
   end
 
-  def delete(conn, %{"id" => id}) do
-    signup_opened_notification = Repo.get(SignupOpenedNotification, id)
-    Repo.delete(signup_opened_notification)
+  # def delete(conn, %{"id" => id}) do
+  #   signup_opened_notification = Repo.get(SignupOpenedNotification, id)
+  #   Repo.delete(signup_opened_notification)
 
-    conn
-    |> put_flash(:info, "SignupOpenedNotification deleted successfully.")
-    |> redirect(to: admin_signup_opened_notification_path(conn, :index))
-  end
+  #   conn
+  #   |> put_flash(:info, "SignupOpenedNotification deleted successfully.")
+  #   |> redirect(to: admin_signup_opened_notification_path(conn, :index))
+  # end
 end

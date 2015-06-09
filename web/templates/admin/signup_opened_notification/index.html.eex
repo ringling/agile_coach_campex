@@ -15,7 +15,6 @@
 
       <td class="text-right">
 
-        <%= link "Delete", to: admin_signup_opened_notification_path(@conn, :delete, signup_opened_notification), method: :delete, class: "btn btn-danger btn-xs" %>
       </td>
     </tr>
 <% end %>
