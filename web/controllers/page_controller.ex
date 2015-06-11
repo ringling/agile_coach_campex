@@ -12,6 +12,7 @@ defmodule AgileCoachCampex.PageController do
     changeset = AgileCoachCampex.SignupOpenedNotification.changeset(%AgileCoachCampex.SignupOpenedNotification{}, signup_opened_notification_params)
     if changeset.valid? do
       son = Repo.insert(changeset)
+      send_confirmation_mail(son.email)
 
       conn
       |> put_flash(:info, "You will be notified on e-mail '#{son.email}',  when sign-up opens.")
@@ -19,6 +20,10 @@ defmodule AgileCoachCampex.PageController do
     else
       render(conn, "index.html", changeset: changeset)
     end
+  end
+
+  defp send_confirmation_mail(to) do 
+    to |> SignupOpenNotificationMail.mail |> AgileCoachCampex.Mailer.deliver
   end
 
 end
