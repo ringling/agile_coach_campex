@@ -39,3 +39,10 @@ docker exec -it postgresql sudo -u postgres createdb -O elixir agile_coach_campe
 ```
 brunch build --production
 ```
+
+```
+docker build -t ringling/agile_coach_campex .
+docker run --name app_db -e POSTGRES_PASSWORD=elixir -d postgres
+docker run -p 80:8080 -i --link postgresql:elixir --name app -d ringling/agile_coach_campex
+
+```
