@@ -1,13 +1,10 @@
 # AgileCoachCampex
 
-To start your new Phoenix application:
+# Setup
 
-1. Install dependencies with `mix deps.get`
-2. Start Phoenix endpoint with `mix phoenix.server`
+## Environt variables
 
-Now you can visit `localhost:4000` from your browser.
-
-
+Look in .env.example to see the required environment variables for the production setup
 
 # Installation
 
@@ -19,6 +16,9 @@ curl -sL https://deb.nodesource.com/setup_0.12 | sudo bash -
 
 # Then install nodejs with:
 sudo apt-get install -y nodejs
+
+#Install brunch
+npm install -g brunch
 
 # Install inotify-tools
 sudo apt-get install inotify-tools
@@ -32,4 +32,10 @@ docker exec -it postgresql sudo -u postgres createuser -P -d -r -s elixir
 docker exec -it postgresql sudo -u postgres createdb -O elixir agile_coach_campex_test
 docker exec -it postgresql sudo -u postgres createdb -O elixir agile_coach_campex_dev
 docker exec -it postgresql sudo -u postgres createdb -O elixir agile_coach_campex_prod
+```
+
+## Deploy
+
+```
+brunch build --production
 ```
