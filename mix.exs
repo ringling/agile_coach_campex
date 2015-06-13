@@ -20,7 +20,7 @@ defmodule AgileCoachCampex.Mixfile do
      applications: app_list(Mix.env)]
   end
 
-  defp app_list(:dev), do: [app_list]
+  defp app_list(:dev), do: app_list
   defp app_list(_), do: app_list
   defp app_list, do: [
     :phoenix, 
