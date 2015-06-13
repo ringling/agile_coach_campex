@@ -20,7 +20,7 @@ defmodule AgileCoachCampex.Mixfile do
      applications: app_list(Mix.env)]
   end
 
-  defp app_list(:dev), do: [:dotenv | app_list]
+  defp app_list(:dev), do: [app_list]
   defp app_list(_), do: app_list
   defp app_list, do: [
     :phoenix, 
@@ -44,7 +44,6 @@ defmodule AgileCoachCampex.Mixfile do
      {:phoenix_ecto, "~> 0.4"},
      {:postgrex, ">= 0.0.0"},
      {:mailman, "~> 0.1.1"},
-     {:dotenv, "~> 1.0.0"},
      {:phoenix_html, "~> 1.0"},
      {:phoenix_live_reload, "~> 0.4", only: :dev},
      {:cowboy, "~> 1.0"}]

@@ -4,7 +4,15 @@
 
 ## Environt variables
 
-Look in .env.example to see the required environment variables for the production setup
+Remember to set these enviromnent variables, e.g. at the end of your prod.secret.exs
+
+```
+System.put_env("SMTP_RELAY", "...")
+System.put_env("SMTP_PORT", "...")
+System.put_env("MAILCHIMP_PASSWORD", "...")
+System.put_env("MAILCHIMP_USERNAME", "...")
+System.put_env("FROM", "...")
+```
 
 # Installation
 
@@ -42,7 +50,6 @@ brunch build --production
 
 ```
 docker build -t ringling/agile_coach_campex .
-docker run --name app_db -e POSTGRES_PASSWORD=elixir -d postgres
 docker run -p 80:8080 -i --link postgresql:elixir --name app -d ringling/agile_coach_campex
 
 ```
