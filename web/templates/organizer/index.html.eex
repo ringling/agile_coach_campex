@@ -11,13 +11,14 @@
 <div class="well">
   <div class="row">
     <div class="box_cont">
-      <div class="col-lg-4 col-sm-6">
+
+      <div class="org_box">
         <div class="box" style="background-color: rgb(190,213,219);">
           <div class="row">
-            <div class="col-md-6 col-sm-6 col-lg-6">
+            <div class="org_cont_box">
               <img class="org-image" src="http://www.goagile.dk/images/12%20louise0883%20copy%20Kopier.jpg">
             </div>
-            <div class="col-md-6 col-sm-6 col-lg-6">
+            <div class="org_cont_box">
               <h2>Louise Navntoft</h2>
               <ul class="list-unstyled">
                 <li><b>Primary contact</b></li>
@@ -29,13 +30,13 @@
         </div>
       </div>
 
-      <div class="col-lg-4 col-sm-6">
+      <div class="org_box">
         <div class="box">
           <div class="row">
-            <div class="col-md-6 col-sm-6 col-lg-6">
+            <div class="org_cont_box">
               <img class="org-image" src="http://www.goagile.dk/images/13%20ole0779%20copy%20Kopier.jpg">
             </div>
-            <div class="col-md-6 col-sm-6 col-lg-6">
+            <div class="org_cont_box">
               <h2>Ole Jepsen</h2>
               <ul class="list-unstyled">
                 <li>ole@goagile.dk</li>
@@ -48,13 +49,13 @@
     </div>
 
     <div class="box_cont">
-      <div class="col-lg-4 col-sm-6">
+      <div class="org_box">
         <div class="box">
           <div class="row">
-            <div class="col-md-6 col-sm-6 col-lg-6">
+            <div class="org_cont_box">
               <img class="org-image" src="http://www.goagile.dk/images/11%20jenny0664%20copy%20Kopier.jpg">
             </div>
-            <div class="col-md-6 col-sm-6 col-lg-6">
+            <div class="org_cont_box">
               <h2>Jenni Jepsen</h2>
               <ul class="list-unstyled">
                 <li>jenni@goagile.dk</li>
@@ -63,13 +64,13 @@
           </div>
         </div>
       </div>
-      <div class="col-lg-4 col-sm-6">
+      <div class="org_box">
         <div class="box">
           <div class="row">
-            <div class="col-md-6 col-sm-6 col-lg-6">
-              <img class="org-image" style="height: auto; width: 65%;" src="/images/thomas_ringling.jpg">
+            <div class="org_cont_box">
+              <img class="org-image" src="/images/thomas_ringling.jpg">
             </div>
-            <div class="col-md-6 col-sm-6 col-lg-6">
+            <div class="org_cont_box">
               <h2>Thomas Ringling</h2>
               <ul class="list-unstyled">
                 <li>thomas@ringling.info</li>
@@ -78,17 +79,16 @@
           </div>
         </div>
       </div>
-
     </div>
 
-        <div class="box_cont">
-      <div class="col-lg-4 col-sm-6">
+    <div class="box_cont">
+      <div class="org_box">
         <div class="box">
           <div class="row">
-            <div class="col-md-6 col-sm-6 col-lg-6">
-              <img class="org-image" style="height: auto; width: 100%;" src="images/bestbrains.jpg">
+            <div class="org_cont_box">
+              <img class="org-image" src="images/bestbrains.jpg">
             </div>
-            <div class="col-md-6 col-sm-6 col-lg-6">
+            <div class="org_cont_box">
               <h2>Best Brains</h2>
               <ul class="list-unstyled">
                 <li>info@bestbrains.dk</li>
@@ -97,8 +97,6 @@
           </div>
         </div>
       </div>
-
-
     </div>
 
   </div>

@@ -1,3 +1,14 @@
+.org_box {
+  @extend .col-sm-6;
+  @extend .col-lg-4;
+  @extend .col-md-4;
+}
+.org_cont_box {
+  @extend .col-sm-6;
+  @extend .col-lg-6;
+  @extend .col-md-6;
+}
+
 .organizers{
   background-color: white;
   min-height: 400px;
