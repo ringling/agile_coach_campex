@@ -51,5 +51,9 @@ brunch build --production
 ```
 docker build -t ringling/agile_coach_campex .
 docker run -p 80:8080 -i --link postgresql:elixir --name app -d ringling/agile_coach_campex
-
 ```
+
+## DB backup
+```
+docker exec -it postgresql sudo -u postgres pg_dump agile_coach_campex_prod > agile_coach_campex_prod_db.bak
+``
