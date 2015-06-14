@@ -3,11 +3,11 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
-
     <title>Agile Coach Camp</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Agile Coach Camp in Denmark">
+    <meta name="Keywords" content="agile, scrum, lean, empowerment, leadership, coaching, happiness, open space">
+    <meta name="author" content="Thomas Ringling">
     <link href="http://fonts.googleapis.com/css?family=Exo+2:400,700" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="<%= static_path(@conn, "/css/app.css") %>">
   </head>
