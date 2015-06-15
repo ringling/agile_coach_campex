@@ -1,6 +1,8 @@
-<h2>New signup_opened_notification</h2>
+<div class="well">
+<h2>New signup opened notification</h2>
 
 <%= render "form.html", changeset: @changeset,
                         action: admin_signup_opened_notification_path(@conn, :create) %>
 
 <%= link "Back", to: admin_signup_opened_notification_path(@conn, :index) %>
+</div>

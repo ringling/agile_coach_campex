@@ -1,4 +1,5 @@
-<h2>Listing signup_opened_notifications</h2>
+<div class="well">
+<h2>Listing signup opened notifications</h2>
 
 <table class="table">
   <thead>
@@ -14,11 +15,12 @@
       <td><%= signup_opened_notification.email %></td>
 
       <td class="text-right">
-
+        <%= link "Delete", to: admin_signup_opened_notification_path(@conn, :delete, signup_opened_notification), method: :delete, class: "btn btn-danger btn-xs" %>
       </td>
     </tr>
 <% end %>
   </tbody>
 </table>
 
-<%= link "New signup_opened_notification", to: admin_signup_opened_notification_path(@conn, :new) %>
+<%= link "New signup opened notification", to: admin_signup_opened_notification_path(@conn, :new) %>
+</div>

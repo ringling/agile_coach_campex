@@ -33,3 +33,5 @@ config :agile_coach_campex, AgileCoachCampex.Repo,
   password: "elixir",
   database: "agile_coach_campex_dev",
   size: 10 # The amount of database connections in the pool
+
+System.put_env("ADMIN_PASS", "test")

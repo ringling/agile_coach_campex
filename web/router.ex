@@ -21,7 +21,10 @@ defmodule AgileCoachCampex.Router do
 
   scope "/admin", AgileCoachCampex.Admin, as: :admin do
     pipe_through :browser
-    resources "/signup_opened_notifications", SignupOpenedNotificationController, only: [:index, :create, :new]
+    resources "/signup_opened_notifications", SignupOpenedNotificationController, only: [:index, :create, :new, :delete]
+    get "/login", AccessController, :login
+    get "/logout", AccessController, :logout
+    post "/login", AccessController, :login_process
   end
 
   # Other scopes may use custom stacks.
