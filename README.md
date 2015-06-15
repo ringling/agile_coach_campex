@@ -60,4 +60,30 @@ docker run -p 80:8080 -i --link postgresql:elixir --name app -d ringling/agile_c
 ## DB backup
 ```
 docker exec -it postgresql sudo -u postgres pg_dump agile_coach_campex_prod > agile_coach_campex_prod_db.bak
-``
+```
+
+## Build
+
+`docker run -p 8080:8080 --link postgresql:elixir -it trenpixster/elixir /bin/bash`
+
+
+_build script_
+
+```sh
+curl -sL https://deb.nodesource.com/setup_0.12 | sudo bash -
+sudo apt-get install -y nodejs
+npm install -g brunch
+
+git clone https://github.com/ringling/agile_coach_campex.git
+cd agile_coach_campex
+npm install
+brunch build --production
+mix deps.get
+MIX_ENV=prod mix phoenix.digest
+MIX_ENV=prod mix release 
+PORT=8080 rel/agile_coach_campex/bin/agile_coach_campex console
+PORT=8080 rel/agile_coach_campex/bin/agile_coach_campex foreground
+```
+docker commit 109ff6d6fe34 app
+
+docker run app -p 8080:8080 --link postgresql:elixir -it /bin/bash
