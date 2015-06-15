@@ -7,13 +7,20 @@ defmodule AgileCoachCampex.Mailer do
   def config do
     %Mailman.Context{
         config:   %Mailman.SmtpConfig{ 
-          relay: System.get_env["SMTP_RELAY"], 
-          username: System.get_env["MAILCHIMP_USERNAME"],
-          password: System.get_env["MAILCHIMP_PASSWORD"],
-          port: String.to_integer(System.get_env["SMTP_PORT"])           
+          relay: Settings.Mail.smtp_relay, 
+          username: Settings.Mail.mailchimp_username,
+          password: Settings.Mail.mailchimp_password,
+          port: Settings.Mail.smtp_port           
         },
         composer: %Mailman.EexComposeConfig{}
       }
   end 
 
 end
+
+
+
+
+
+
+

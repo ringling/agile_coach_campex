@@ -15,9 +15,8 @@ defmodule AgileCoachCampex.Admin.AccessController do
   end
 
   def login_process(conn, params) do
-    admin_pass=System.get_env["ADMIN_PASS"]
-    IO.inspect admin_pass
-    user=find_user(params["password"]==admin_pass, params)
+    IO.inspect Settings.Admin.password
+    user=find_user(params["password"]==Settings.Admin.password, params)
     IO.inspect user
     if user == nil do
       conn

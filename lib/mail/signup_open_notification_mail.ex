@@ -3,7 +3,7 @@ defmodule SignupOpenNotificationMail do
   def mail(to) do
     %Mailman.Email{
       subject: "Agile Coach Camp 2016 - notification",
-      from: System.get_env["FROM"],
+      from: Settings.Mail.from,
       to: [to],
       data: [name: to],
       text: "Agile Coach Camp 2016\nYou will now be notified when the sign-up opens :)",
@@ -19,4 +19,3 @@ defmodule SignupOpenNotificationMail do
   end
 
 end
-
