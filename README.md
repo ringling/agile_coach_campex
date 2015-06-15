@@ -2,16 +2,20 @@
 
 # Setup
 
-## Environt variables
+## Config variables
 
-Remember to set these enviromnent variables, e.g. at the end of your prod.secret.exs
+Remember to set these config variables in your prod.secret.exs
 
 ```
-System.put_env("SMTP_RELAY", "...")
-System.put_env("SMTP_PORT", "...")
-System.put_env("MAILCHIMP_PASSWORD", "...")
-System.put_env("MAILCHIMP_USERNAME", "...")
-System.put_env("FROM", "...")
+config :agile_coach_campex, :mail,
+  smtp_relay: "...",
+  smtp_port: 587,
+  mailchimp_password: "...",
+  mailchimp_username: "...",
+  from: "..."
+
+config :agile_coach_campex, :admin,
+  password: "..."
 ```
 
 # Installation
