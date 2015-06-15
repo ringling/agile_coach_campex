@@ -45,11 +45,11 @@ docker exec -it postgresql sudo -u postgres createdb -O elixir agile_coach_campe
 ## Deploy
 
 ```
-brunch build --production
-```
-
-```
+cd acc_deploy/agile_coach_campex/
+git pull
 docker build -t ringling/agile_coach_campex .
+docker stop app
+docker rm app
 docker run -p 80:8080 -i --link postgresql:elixir --name app -d ringling/agile_coach_campex
 ```
 
