@@ -9,6 +9,7 @@
     <meta name="Keywords" content="agile, scrum, lean, empowerment, leadership, coaching, happiness, open space">
     <meta name="author" content="Thomas Ringling">
     <link href="http://fonts.googleapis.com/css?family=Exo+2:400,700" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="<%= static_path(@conn, "/css/app.css") %>">
   </head>
 
@@ -28,7 +29,13 @@
         <li class="<%= menu_class(@conn, "program") %>"><a href="<%= programme_path(@conn, :index) %>">Program<span class="sr-only">(current)</span></a></li>
         <li class="<%= menu_class(@conn, "attendee") %>"style="visibility: hidden"><a href="#">Attendees<span class="sr-only">(current)</span></a></li>
         <%= if Plug.Conn.get_session(@conn, :username)!=nil do %>
-          <li class="<%= menu_class(@conn, "admin") %>"><a href="<%= admin_signup_opened_notification_path(@conn, :index) %>">Admin<span class="sr-only">(current)</span></a></li>
+          <li class="<%= menu_class(@conn, "admin") %>"><a href="<%= admin_signup_opened_notification_path(@conn, :index) %>"> Admin<span class="sr-only">(current)</span></a></li>
+          <li>
+            <a href="<%= admin_access_path(@conn, :logout) %>"> Logout<span class="sr-only">(current)</span></a>
+ 
+          </li>
+
+
         <% end %>
         </div>
       </nav>

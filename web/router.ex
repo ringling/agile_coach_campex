@@ -23,6 +23,7 @@ defmodule AgileCoachCampex.Router do
     pipe_through :browser
     resources "/signup_opened_notifications", SignupOpenedNotificationController, only: [:index, :create, :new, :delete]
     get "/login", AccessController, :login
+    get "/", AccessController, :login
     get "/logout", AccessController, :logout
     post "/login", AccessController, :login_process
   end
