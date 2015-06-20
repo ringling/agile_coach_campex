@@ -51,7 +51,8 @@ defmodule AgileCoachCampex.Mixfile do
       {:phoenix_live_reload, "~> 0.4", only: :dev},
       {:cowboy, "~> 1.0"},
       {:eiconv, github: "zotonic/eiconv"},
-      {:exrm, "~> 0.15.3"}
+      {:exrm, "~> 0.15.3"},
+      {:inch_ex, only: :docs}
     ]
   end
 
