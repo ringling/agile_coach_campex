@@ -1,5 +1,7 @@
 # AgileCoachCampex
 
+[![Build Status](https://semaphoreci.com/api/v1/projects/e0151ad7-cd12-4675-9aea-1de3433b0a63/461750/badge.svg)](https://semaphoreci.com/ringling/agile_coach_campex)  
+
 # Setup
 
 ## Config variables
