@@ -10,6 +10,12 @@ defmodule Settings do
     def mailchimp_username, do: Application.get_env(:agile_coach_campex, :mail)[:mailchimp_username]
     def mailchimp_password, do: Application.get_env(:agile_coach_campex, :mail)[:mailchimp_password]
     def smtp_port, do: Application.get_env(:agile_coach_campex, :mail)[:smtp_port]
+
   end
 
+
+
 end
+
+
+

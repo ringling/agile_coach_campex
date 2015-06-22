@@ -16,3 +16,15 @@ config :agile_coach_campex, AgileCoachCampex.Repo,
   password: System.get_env("DATABASE_POSTGRESQL_PASSWORD") || "elixir",
   database: "agile_coach_campex_test",
   size: 1 # Use a single connection for transactional tests
+
+config :agile_coach_campex, :mail,
+  smtp_relay: "smtp.my_testserver.com",
+  smtp_port: 587,
+  mailchimp_password: "test_pass",
+  mailchimp_username: "test_user",
+  from: "no-reply@test.org"
+
+config :agile_coach_campex, :admin,
+  password: "test"
+
+  
