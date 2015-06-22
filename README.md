@@ -50,6 +50,59 @@ docker exec -it postgresql sudo -u postgres createdb -O elixir agile_coach_campe
 docker exec -it postgresql sudo -u postgres createdb -O elixir agile_coach_campex_prod
 ```
 
+## Setup Semaphore deployment
+
+### Production secret config
+
+Add prod.secret.exs in __Custom configuration files__
+
+/home/runner/agile_coach_campex/config/prod.secret.exs
+
+
+### Generate SSH keys
+
+To give Semaphore access to app server we do the following
+
+On app server
+
+_Key pairs and add to authorized keys_
+
+```
+ssh-keygen -t rsa
+cat ~/.ssh/id_rsa.pub >> ~/.ssh/authorized_keys"
+```
+
+
+### Private SSH key
+
+`cat ~/.ssh/id_rsa` 
+
+Copy private key and paste as described here https://semaphoreci.com/docs/generic-deployment.html under SSH key
+
+
+### Deploy commands
+
+```
+sudo curl -sL https://deb.nodesource.com/setup_0.12 | sudo bash -
+sudo apt-get install -qy git nodejs
+sudo npm install -g brunch
+npm install
+brunch build --production
+yes | mix local.hex --force
+yes | mix deps.get
+MIX_ENV=prod mix phoenix.digest
+MIX_ENV=prod mix release
+scp -o StrictHostKeyChecking=no rel/agile_coach_campex/*.tar.gz root@app01.ringling.info:/root/deploys
+echo "Upgrade via ssh command"
+```
+
+
+
+
+
+
+
+
 ## Deploy
 
 ```
