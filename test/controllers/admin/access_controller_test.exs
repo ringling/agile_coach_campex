@@ -1,7 +1,6 @@
 defmodule AgileCoachCampex.AccessControllerTest do
   use AgileCoachCampex.ConnCase
 
-  alias AgileCoachCampex.SignupOpenedNotification
   @valid_attrs %{email: "some content"}
   @invalid_attrs %{}
 
