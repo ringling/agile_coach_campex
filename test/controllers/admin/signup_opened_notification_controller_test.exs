@@ -1,10 +1,6 @@
 defmodule AgileCoachCampex.SignupOpenedNotificationControllerTest do
   use AgileCoachCampex.ConnCase
 
-  use Plug.Test
-
-  alias Plug.ProcessStore
-
   alias AgileCoachCampex.SignupOpenedNotification
   @valid_attrs %{email: "some content"}
   @invalid_attrs %{}
@@ -57,7 +53,7 @@ defmodule AgileCoachCampex.SignupOpenedNotificationControllerTest do
   test "does not update chosen resource and renders errors when data is invalid", %{conn: conn} do
     signup_opened_notification = Repo.insert %SignupOpenedNotification{}
     conn = put conn, admin_signup_opened_notification_path(conn, :update, signup_opened_notification), signup_opened_notification: @invalid_attrs
-    # assert html_response(conn, 200) =~ "Edit signup opened notification"
+    assert html_response(conn, 200) =~ "Edit signup opened notification"
   end
 
   test "deletes chosen resource", %{conn: conn} do
