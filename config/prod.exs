@@ -15,6 +15,7 @@ config :agile_coach_campex, AgileCoachCampex.Endpoint,
   http: [port: {:system, "PORT"}],
   url: [host: "accdk.org"],
   cache_static_manifest: "priv/static/manifest.json",
+  code_reloader: false,
   server: true
 
 # ## SSL Support
