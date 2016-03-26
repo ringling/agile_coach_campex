@@ -12,6 +12,7 @@ defmodule AgileCoachCampex.Endpoint do
   # Code reloading can be explicitly enabled under the
   # :code_reloader configuration of your endpoint.
   if code_reloading? do
+    socket "/phoenix/live_reload/socket", Phoenix.LiveReloader.Socket
     plug Phoenix.LiveReloader
     plug Phoenix.CodeReloader
   end
@@ -31,5 +32,5 @@ defmodule AgileCoachCampex.Endpoint do
     key: "_agile_coach_campex_key",
     signing_salt: "4Cj37gXa"
 
-  plug :router, AgileCoachCampex.Router
+  plug AgileCoachCampex.Router
 end
