@@ -31,7 +31,7 @@ defmodule AgileCoachCampex.PageControllerTest do
   end
 
   test "creates resource and redirects when data is valid", %{conn: conn} do
-    conn = post conn, page_path(conn, :create), signup_opened_notification: @valid_attrs
+    conn = post(conn, page_path(conn, :create), signup_opened_notification: @valid_attrs)
     assert get_flash(conn, :info) == "You will be notified on e-mail '#{@valid_attrs.email}',  when sign-up opens."
     assert html_response(conn, 302) =~ "redirected"
     assert Repo.get_by(SignupOpenedNotification, @valid_attrs)

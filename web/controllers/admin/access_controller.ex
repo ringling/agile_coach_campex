@@ -13,7 +13,7 @@ defmodule AgileCoachCampex.Admin.AccessController do
   end
 
   def login_process(conn, params) do
-    user=find_user(params["password"]==Settings.Admin.password, params)
+    user = find_user(params["password"]==Settings.Admin.password, params)
     if user == nil do
       conn
       |> put_flash(:error, "Username and or password was wrong")
