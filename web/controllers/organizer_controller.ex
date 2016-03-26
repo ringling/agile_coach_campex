@@ -4,7 +4,6 @@ defmodule AgileCoachCampex.OrganizerController do
   alias AgileCoachCampex.Organizer
 
   plug :scrub_params, "organizer" when action in [:create, :update]
-  plug :action
 
   def index(conn, _params) do
     # organizers = Repo.all(Organizer)

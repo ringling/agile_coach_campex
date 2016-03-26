@@ -4,7 +4,6 @@ defmodule AgileCoachCampex.ProgrammeController do
   alias AgileCoachCampex.Programme
 
   plug :scrub_params, "programme" when action in [:create, :update]
-  plug :action
 
   def index(conn, _params) do
     programmes = []

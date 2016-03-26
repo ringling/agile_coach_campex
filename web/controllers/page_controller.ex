@@ -1,8 +1,6 @@
 defmodule AgileCoachCampex.PageController do
   use AgileCoachCampex.Web, :controller
 
-  plug :action
-
   def index(conn, _params) do
     changeset = AgileCoachCampex.SignupOpenedNotification.changeset(%AgileCoachCampex.SignupOpenedNotification{})
     render(conn, "index.html", changeset: changeset)
@@ -11,7 +9,7 @@ defmodule AgileCoachCampex.PageController do
   def create(conn, %{"signup_opened_notification" => signup_opened_notification_params}) do
     changeset = AgileCoachCampex.SignupOpenedNotification.changeset(%AgileCoachCampex.SignupOpenedNotification{}, signup_opened_notification_params)
     if changeset.valid? do
-      son = Repo.insert(changeset)
+      {:ok, son} = Repo.insert(changeset)
       send_confirmation_mail(son.email)
 
       conn
@@ -22,7 +20,7 @@ defmodule AgileCoachCampex.PageController do
     end
   end
 
-  defp send_confirmation_mail(to) do 
+  defp send_confirmation_mail(to) do
     to |> SignupOpenNotificationMail.mail |> AgileCoachCampex.Mailer.deliver
   end
 

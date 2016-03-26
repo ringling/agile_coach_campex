@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en"> 
+<html lang="en">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -32,7 +32,7 @@
           <li class="<%= menu_class(@conn, "admin") %>"><a href="<%= admin_signup_opened_notification_path(@conn, :index) %>"> Admin<span class="sr-only">(current)</span></a></li>
           <li>
             <a href="<%= admin_access_path(@conn, :logout) %>"> Logout<span class="sr-only">(current)</span></a>
- 
+
           </li>
 
 
@@ -43,7 +43,7 @@
       <p class="alert alert-info" role="alert"><%= get_flash(@conn, :info) %></p>
       <p class="alert alert-danger" role="alert"><%= get_flash(@conn, :error) %></p>
 
-      <%= @inner %>
+      <%= render @view_module, @view_template, assigns %>
 
     </div> <!-- /container -->
     <script src="<%= static_path(@conn, "/js/app.js") %>"></script>

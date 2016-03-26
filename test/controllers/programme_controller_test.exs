@@ -32,32 +32,32 @@ defmodule AgileCoachCampex.ProgrammeControllerTest do
   end
 
   test "shows chosen resource", %{conn: conn} do
-    programme = Repo.insert %Programme{}
+    {:ok, programme} = Repo.insert %Programme{}
     conn = get conn, programme_path(conn, :show, programme)
     assert html_response(conn, 200) =~ "Show programme"
   end
 
   test "renders form for editing chosen resource", %{conn: conn} do
-    programme = Repo.insert %Programme{}
+    {:ok, programme} = Repo.insert %Programme{}
     conn = get conn, programme_path(conn, :edit, programme)
     assert html_response(conn, 200) =~ "Edit programme"
   end
 
   test "updates chosen resource and redirects when data is valid", %{conn: conn} do
-    programme = Repo.insert %Programme{}
+    {:ok, programme} = Repo.insert %Programme{}
     conn = put conn, programme_path(conn, :update, programme), programme: @valid_attrs
     assert redirected_to(conn) == programme_path(conn, :index)
     assert Repo.get_by(Programme, @valid_attrs)
   end
 
   test "does not update chosen resource and renders errors when data is invalid", %{conn: conn} do
-    programme = Repo.insert %Programme{}
+    {:ok, programme} = Repo.insert %Programme{}
     conn = put conn, programme_path(conn, :update, programme), programme: @invalid_attrs
     assert html_response(conn, 200) =~ "Edit programme"
   end
 
   test "deletes chosen resource", %{conn: conn} do
-    programme = Repo.insert %Programme{}
+    {:ok, programme} = Repo.insert %Programme{}
     conn = delete conn, programme_path(conn, :delete, programme)
     assert redirected_to(conn) == programme_path(conn, :index)
     refute Repo.get(Programme, programme.id)

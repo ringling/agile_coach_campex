@@ -11,6 +11,7 @@ config :logger, level: :warn
 
 # Configure your database
 config :agile_coach_campex, AgileCoachCampex.Repo,
+  pool: Ecto.Adapters.SQL.Sandbox,
   adapter: Ecto.Adapters.Postgres,
   username: System.get_env("DATABASE_POSTGRESQL_USERNAME") || "elixir",
   password: System.get_env("DATABASE_POSTGRESQL_PASSWORD") || "elixir",
@@ -27,4 +28,4 @@ config :agile_coach_campex, :mail,
 config :agile_coach_campex, :admin,
   password: "test"
 
-  
+

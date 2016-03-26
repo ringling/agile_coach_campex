@@ -32,32 +32,32 @@ defmodule AgileCoachCampex.OrganizerControllerTest do
   end
 
   test "shows chosen resource", %{conn: conn} do
-    organizer = Repo.insert %Organizer{}
+    {:ok, organizer} = Repo.insert %Organizer{}
     conn = get conn, organizer_path(conn, :show, organizer)
     assert html_response(conn, 200) =~ "Show organizer"
   end
 
   test "renders form for editing chosen resource", %{conn: conn} do
-    organizer = Repo.insert %Organizer{}
+    {:ok, organizer} = Repo.insert %Organizer{}
     conn = get conn, organizer_path(conn, :edit, organizer)
     assert html_response(conn, 200) =~ "Edit organizer"
   end
 
   test "updates chosen resource and redirects when data is valid", %{conn: conn} do
-    organizer = Repo.insert %Organizer{}
+    {:ok, organizer} = Repo.insert %Organizer{}
     conn = put conn, organizer_path(conn, :update, organizer), organizer: @valid_attrs
     assert redirected_to(conn) == organizer_path(conn, :index)
     assert Repo.get_by(Organizer, @valid_attrs)
   end
 
   test "does not update chosen resource and renders errors when data is invalid", %{conn: conn} do
-    organizer = Repo.insert %Organizer{}
+    {:ok, organizer} = Repo.insert %Organizer{}
     conn = put conn, organizer_path(conn, :update, organizer), organizer: @invalid_attrs
     assert html_response(conn, 200) =~ "Edit organizer"
   end
 
   test "deletes chosen resource", %{conn: conn} do
-    organizer = Repo.insert %Organizer{}
+    {:ok, organizer} = Repo.insert %Organizer{}
     conn = delete conn, organizer_path(conn, :delete, organizer)
     assert redirected_to(conn) == organizer_path(conn, :index)
     refute Repo.get(Organizer, organizer.id)
