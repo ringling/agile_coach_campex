@@ -1,8 +1,6 @@
 defmodule AgileCoachCampex.Admin.AccessController do
   use AgileCoachCampex.Web, :controller
 
-  plug :action
-
   def login(conn, _params) do
     render conn, "login.html"
   end

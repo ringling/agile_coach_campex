@@ -5,7 +5,6 @@ defmodule AgileCoachCampex.Admin.SignupOpenedNotificationController do
 
   plug Authenticator
   plug :scrub_params, "signup_opened_notification" when action in [:create, :update]
-  plug :action
 
   def index(conn, _params) do
     signup_opened_notifications = Repo.all(SignupOpenedNotification)
@@ -65,5 +64,5 @@ defmodule AgileCoachCampex.Admin.SignupOpenedNotificationController do
     |> put_flash(:info, "SignupOpenedNotification deleted successfully.")
     |> redirect(to: admin_signup_opened_notification_path(conn, :index))
   end
-  
+
 end

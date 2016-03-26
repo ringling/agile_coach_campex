@@ -1,7 +1,7 @@
 defmodule AgileCoachCampex.PageController do
   use AgileCoachCampex.Web, :controller
 
-  plug :action
+
 
   def index(conn, _params) do
     changeset = AgileCoachCampex.SignupOpenedNotification.changeset(%AgileCoachCampex.SignupOpenedNotification{})
@@ -22,7 +22,7 @@ defmodule AgileCoachCampex.PageController do
     end
   end
 
-  defp send_confirmation_mail(to) do 
+  defp send_confirmation_mail(to) do
     to |> SignupOpenNotificationMail.mail |> AgileCoachCampex.Mailer.deliver
   end
 
