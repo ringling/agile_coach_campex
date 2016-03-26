@@ -1,4 +1,4 @@
-FROM trenpixster/elixir:latest                                                                                                                                                                                                                                                
+FROM elixir:latest
 MAINTAINER Thomas Ringling <thomas.ringling@gmail.com>
 RUN curl -sL https://deb.nodesource.com/setup_0.12 | sudo bash -
 RUN apt-get update && apt-get install -qy nodejs postgresql-client sqlite3 --no-install-recommends && rm -rf /var/lib/apt/lists/*

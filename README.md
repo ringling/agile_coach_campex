@@ -2,7 +2,7 @@
 
 Phoenix app, containing web site
 
-[![Build Status](https://semaphoreci.com/api/v1/projects/e0151ad7-cd12-4675-9aea-1de3433b0a63/461750/badge.svg)](https://semaphoreci.com/ringling/agile_coach_campex)  
+[![Build Status](https://semaphoreci.com/api/v1/projects/e0151ad7-cd12-4675-9aea-1de3433b0a63/461750/badge.svg)](https://semaphoreci.com/ringling/agile_coach_campex)
 
 # Setup
 
@@ -75,7 +75,7 @@ cat ~/.ssh/id_rsa.pub >> ~/.ssh/authorized_keys"
 
 ### Private SSH key
 
-`cat ~/.ssh/id_rsa` 
+`cat ~/.ssh/id_rsa`
 
 Copy private key and paste as described here https://semaphoreci.com/docs/generic-deployment.html under SSH key
 
@@ -86,10 +86,10 @@ Copy private key and paste as described here https://semaphoreci.com/docs/generi
 sudo curl -sL https://deb.nodesource.com/setup_0.12 | sudo bash -
 sudo apt-get install -qy git nodejs
 sudo npm install -g brunch
+yes | mix deps.get
 npm install
 brunch build --production
 yes | mix local.hex --force
-yes | mix deps.get
 MIX_ENV=prod mix phoenix.digest
 MIX_ENV=prod mix release
 scp -o StrictHostKeyChecking=no rel/agile_coach_campex/*.tar.gz root@app01.ringling.info:/root/deploys
@@ -137,7 +137,7 @@ npm install
 brunch build --production
 mix deps.get
 MIX_ENV=prod mix phoenix.digest
-MIX_ENV=prod mix release 
+MIX_ENV=prod mix release
 PORT=8080 rel/agile_coach_campex/bin/agile_coach_campex console
 PORT=8080 rel/agile_coach_campex/bin/agile_coach_campex foreground
 ```
