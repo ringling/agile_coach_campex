@@ -11,6 +11,16 @@ Phoenix app, containing web site
 Remember to set these config variables in your prod.secret.exs
 
 ```
+
+# Configure your database
+config :agile_coach_campex, AgileCoachCampex.Repo,
+  adapter: Ecto.Adapters.Postgres,
+  hostname: "elixir",
+  username: "elixir",
+  password: "...",
+  database: "agile_coach_campex_prod",
+  size: 20 # The amount of database connections in the pool
+
 config :agile_coach_campex, :mail,
   smtp_relay: "...",
   smtp_port: 587,
@@ -24,7 +34,7 @@ config :agile_coach_campex, :admin,
 
 # Installation
 
-http://www.phoenixframework.org/v0.13.1/docs/overview
+http://www.phoenixframework.org/v1.1.4/docs/overview
 
 ```bash
 # Note the new setup script name for Node.js v0.12
@@ -98,11 +108,6 @@ echo "Upgrade via ssh command"
 
 
 
-
-
-
-
-
 ## Deploy
 
 ```
@@ -122,7 +127,6 @@ docker exec -it postgresql sudo -u postgres pg_dump agile_coach_campex_prod > ag
 ## Build
 
 `docker run -p 8080:8080 --link postgresql:elixir -it trenpixster/elixir /bin/bash`
-
 
 _build script_
 
