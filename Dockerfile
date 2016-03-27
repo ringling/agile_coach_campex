@@ -1,28 +1,38 @@
 FROM ringling/elixir:latest
 MAINTAINER Thomas Ringling <thomas.ringling@gmail.com>
-RUN su root
-RUN apt-get update
-RUN apt-get -qy install apt-utils curl git sudo nodejs npm
-RUN yes | apt-get install -qy postgresql-client sqlite3 --no-install-recommends && rm -rf /var/lib/apt/lists/*
-RUN echo %sudo ALL=NOPASSWD: ALL>>/etc/ssudoers
-RUN npm install -g brunch
-#RUN useradd -m -G app
+
+# Install pre-reqs
+RUN apt-get update && apt-get install -y -q --no-install-recommends \
+    apt-transport-https \
+    build-essential \
+    ca-certificates \
+    curl \
+    git \
+    libssl-dev \
+    python \
+    rsync \
+    sudo \
+    software-properties-common \
+    wget \
+    postgresql-client \
+    sqlite3 \
+    && rm -rf /var/lib/apt/lists/*
+
+RUN curl -sL https://deb.nodesource.com/setup_5.x | sudo -E bash - && apt-get install -y nodejs
 
 RUN mkdir /phoenixapp
 WORKDIR /phoenixapp
 
-COPY ./mix.exs /phoenixapp/mix.exs
-COPY ./mix.lock /phoenixapp/mix.lock
-RUN yes | mix local.hex
-RUN yes | mix deps.get
-
 COPY ./ /phoenixapp
+
+# We don't want Node issues
+RUN rm -rf /phoenixapp/node_modules
+
+RUN yes | mix local.hex && mix deps.get
+RUN npm install brunch -g && npm install
 
 ENV PORT 8080
 ENV MIX_ENV prod
-
-RUN npm install
-RUN yes | mix deps.compile
 
 EXPOSE 8080
 
