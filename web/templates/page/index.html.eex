@@ -1,6 +1,9 @@
 <div class="well date">
   <div class="well inner text-center">
-      <h2>See you :)</h2>
+      <h2>ACCDK 2016 is open for registration</h2>
+
+      <a class="btn btn-warning" target="_blank" href="https://www.eventbrite.com/e/accdk-2016-tickets-23088283678">SIGN UP HERE</a>
+
       <h1>June 2-4 2016</h1>
   </div>
 </div>
@@ -10,33 +13,7 @@
   <div class="row">
     <div class="box_cont">
       <div class="col-lg-6">
-        <div class="box program_box">
-          <h2>Be the first to know</h2>
-          <p>Get an email, when the sign-up opens for the <strong>Agile Coach Camp 2016</strong></p>
 
-          <%= form_for @changeset, page_path(@conn, :create), fn f -> %>
-            <%= if f.errors != [] do %>
-              <div class="alert alert-danger">
-                <p>Oops, something went wrong! Please check the errors below:</p>
-                <ul>
-                  <%= for {attr, message} <- f.errors do %>
-                    <li><%= humanize(attr) %> <%= message %></li>
-                  <% end %>
-                </ul>
-              </div>
-            <% end %>
-
-            <div class="form-group">
-              <label>Email adress</label>
-              <%= text_input f, :email, class: "form-control" %>
-            </div>
-
-            <div class="form-group">
-              <%= submit "Submit", class: "btn btn-primary" %>
-            </div>
-          <% end %>
-
-        </div>
       </div>
       <div class="col-lg-6">
         <div class="box">
@@ -44,12 +21,7 @@
         </div>
       </div>
 
-      <div class="col-lg-6">
-        <div class="box sign_up_box">
-          <h4>Sign up</h4>
-          ABCD
-        </div>
-      </div>
+
 
     </div>
   </div>
