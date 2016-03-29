@@ -63,6 +63,7 @@
           </div>
         </div>
       </div>
+
       <div class="org_box">
         <div class="box">
           <div class="row">
@@ -85,17 +86,87 @@
         <div class="box">
           <div class="row">
             <div class="org_cont_box">
-              <img class="org-image" src="images/bestbrains.jpg">
+              <i class="fa fa-7 fa-user" style="font-size: 7em"></i>
             </div>
             <div class="org_cont_box">
-              <h2>Best Brains</h2>
+              <h2>Karen Trolle Schütter</h2>
               <ul class="list-unstyled">
-                <li>info@bestbrains.dk</li>
+                <li>kts@schultz.dk</li>
               </ul>
             </div>
           </div>
         </div>
       </div>
+
+      <div class="org_box">
+        <div class="box">
+          <div class="row">
+            <div class="org_cont_box">
+              <i class="fa fa-7 fa-user" style="font-size: 7em"></i>
+            </div>
+            <div class="org_cont_box">
+              <h2>Tommy Larsen</h2>
+              <ul class="list-unstyled">
+                <li>to10lar@gmail.com</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="box_cont">
+      <div class="org_box">
+        <div class="box">
+          <div class="row">
+            <div class="org_cont_box">
+              <i class="fa fa-7 fa-user" style="font-size: 7em"></i>
+            </div>
+            <div class="org_cont_box">
+              <h2>Leise Astrid Passer Jensen </h2>
+              <ul class="list-unstyled">
+                <li style="word-wrap:  break-word">leisepasserjensen@gmail.com</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="org_box">
+        <div class="box">
+          <div class="row">
+            <div class="org_cont_box">
+              <i class="fa fa-7 fa-user" style="font-size: 7em"></i>
+            </div>
+            <div class="org_cont_box">
+              <h2>Per Beining</h2>
+              <ul class="list-unstyled">
+                <li>Per@beining.dk</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="box_cont">
+      <div class="org_box">
+        <div class="box">
+          <div class="row">
+            <div class="org_cont_box">
+              <i class="fa fa-7 fa-user" style="font-size: 7em"></i>
+            </div>
+            <div class="org_cont_box">
+              <h2>Agge Kempff-Andersen</h2>
+              <ul class="list-unstyled">
+                <li>agge@akaconsult.dk</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
     </div>
 
   </div>
