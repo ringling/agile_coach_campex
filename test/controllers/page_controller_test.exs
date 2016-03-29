@@ -20,15 +20,15 @@ defmodule AgileCoachCampex.PageControllerTest do
     assert html_response(conn, 200) =~ "Agile Coach Camp"
   end
 
-  test "has signup opened form", %{conn: conn} do
-    conn = get conn, "/"
-    assert html_response(conn, 200) =~ "Be the first to know"
-  end
+  # test "has signup opened form", %{conn: conn} do
+  #   conn = get conn, "/"
+  #   assert html_response(conn, 200) =~ "Be the first to know"
+  # end
 
-  test "mail send on sign up", %{conn: conn} do
-    conn = get conn, "/"
-    assert html_response(conn, 200) =~ "Be the first to know"
-  end
+  # test "mail send on sign up", %{conn: conn} do
+  #   conn = get conn, "/"
+  #   assert html_response(conn, 200) =~ "Be the first to know"
+  # end
 
   test "creates resource and redirects when data is valid", %{conn: conn} do
     conn = post(conn, page_path(conn, :create), signup_opened_notification: @valid_attrs)
