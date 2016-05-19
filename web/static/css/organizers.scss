@@ -1,12 +1,12 @@
 .org_box {
-  @extend .col-sm-6;
-  @extend .col-lg-4;
-  @extend .col-md-4;
+  @extend .col-sm-6 !optional;
+  @extend .col-lg-4 !optional;
+  @extend .col-md-4 !optional;
 }
 .org_cont_box {
-  @extend .col-sm-6;
-  @extend .col-lg-6;
-  @extend .col-md-6;
+  @extend .col-sm-6 !optional;
+  @extend .col-lg-6 !optional;
+  @extend .col-md-6 !optional;
 }
 
 .organizers{
