@@ -1,0 +1,31 @@
+<div class="well">
+  <div class="well inner">
+    <h2>2016</h2>
+  </div>
+  <div class="row">
+    <div class="box_cont">
+      <div class="col-lg-4">
+        <div class="well inner">
+          <h2>CI/CD Slides</h2>
+          <ul class="list-unstyled">
+            <li><a target="_blank" href="https://goo.gl/5k6W9J"> Slides</a></li>
+            <li><a target="_blank" href="https://goo.gl/SNZd24"> Jessup</a></li>
+            <li><a target="_blank" href="https://goo.gl/7wV4wp"> Onchoa</a></li>
+          </ul>
+
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <div class="well inner">
+
+        </div>
+      </div>
+
+      <div class="col-lg-4">
+        <div class="well inner">
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
