@@ -18,6 +18,7 @@ defmodule AgileCoachCampex.Router do
     resources "/organizers", OrganizerController
     resources "/programs", ProgrammeController
     resources "/gallery", GalleryController
+    resources "/sponsor", SponsorController
   end
 
   scope "/admin", AgileCoachCampex.Admin, as: :admin do
