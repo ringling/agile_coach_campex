@@ -15,7 +15,7 @@
         <div class="box" style="background-color: rgb(190,213,219);">
           <div class="row">
             <div class="org_cont_box">
-              <img class="org-image" src="http://www.goagile.dk/images/12%20louise0883%20copy%20Kopier.jpg">
+              <img class="org-image" src="/images/prof-louise.jpg">
             </div>
             <div class="org_cont_box">
               <h2>Louise Navntoft</h2>
@@ -33,7 +33,7 @@
         <div class="box">
           <div class="row">
             <div class="org_cont_box">
-              <img class="org-image" src="http://www.goagile.dk/images/13%20ole0779%20copy%20Kopier.jpg">
+              <img class="org-image" src="/images/prof-ole.jpg">
             </div>
             <div class="org_cont_box">
               <h2>Ole Jepsen</h2>
@@ -52,7 +52,7 @@
         <div class="box">
           <div class="row">
             <div class="org_cont_box">
-              <img class="org-image" src="http://www.goagile.dk/images/11%20jenny0664%20copy%20Kopier.jpg">
+              <img class="org-image" src="/images/prof-jenni.jpg">
             </div>
             <div class="org_cont_box">
               <h2>Jenni Jepsen</h2>
