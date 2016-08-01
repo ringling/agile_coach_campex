@@ -1,39 +1,24 @@
-FROM ringling/elixir:latest
+FROM bitwalker/alpine-elixir-phoenix:6.0
 MAINTAINER Thomas Ringling <thomas.ringling@gmail.com>
 
-# Install pre-reqs
-RUN apt-get update && apt-get install -y -q --no-install-recommends \
-    apt-transport-https \
-    build-essential \
-    ca-certificates \
-    curl \
-    git \
-    libssl-dev \
-    python \
-    rsync \
-    sudo \
-    software-properties-common \
-    wget \
-    postgresql-client \
-    sqlite3 \
-    && rm -rf /var/lib/apt/lists/*
+EXPOSE 5000
+ENV PORT=5000 MIX_ENV=prod
 
-RUN curl -sL https://deb.nodesource.com/setup_5.x | sudo -E bash - && apt-get install -y nodejs
+# Cache npm deps
+ADD package.json package.json
+RUN ls -la
 
-RUN mkdir /phoenixapp
-WORKDIR /phoenixapp
+# Same with elixir deps
+ADD mix.exs mix.lock ./
+RUN mix do deps.get, deps.compile
 
-COPY ./ /phoenixapp
+ADD . .
+RUN npm install
 
-# We don't want Node issues
-RUN rm -rf /phoenixapp/node_modules
+# Run frontend build, compile, and digest assets
+RUN brunch build --production && \
+    mix do compile, phoenix.digest
 
-RUN yes | mix local.hex && mix deps.get
-RUN npm install brunch -g && npm install
+USER default
 
-ENV PORT 8080
-ENV MIX_ENV prod
-
-EXPOSE 8080
-
-ENTRYPOINT /phoenixapp/scripts/start-server.sh
+CMD ["mix", "phoenix.server"]
