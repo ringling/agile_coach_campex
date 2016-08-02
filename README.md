@@ -34,7 +34,24 @@ config :agile_coach_campex, :admin,
 
 # Installation
 
-## Build Docker App image
+## Setup Docker PostgreSQL
+
+```
+docker run --name postgresql -p 5432:5432 -d -v $PWD/postgres/data:/var/lib/postgresql sameersbn/postgresql:9.4
+docker exec -it postgresql sudo -u postgres createuser -P -d -r -s elixir
+docker exec -it postgresql sudo -u postgres createdb -O elixir agile_coach_campex_prod
+docker exec -it postgresql sudo -u postgres createdb -O elixir agile_coach_campex_test
+docker exec -it postgresql sudo -u postgres createdb -O elixir agile_coach_campex_dev
+```
+
+In development mode you don't need `-v $PWD/postgres/data:/var/lib/postgresql`, unless you want to keep data between runs
+
+### DB backup
+```
+docker exec -it postgresql sudo -u postgres pg_dump agile_coach_campex_prod > agile_coach_campex_prod_db.bak
+```
+
+## Build App image
 
 ```
 cd acc_deploy/agile_coach_campex/
@@ -44,25 +61,20 @@ mix deps.clean --all
 docker build -t ringling/agile_coach_campex .
 ```
 
+## Start App Image
 
-Before starting _app_ image, _postgresql_ image has to be running
+Before starting the _app_ image, the _postgresql_ image has to be running
 
 ```
 docker stop app && docker rm app
 docker run -p 8080:5000 -i  --link postgresql:elixir --name app -d ringling/agile_coach_campex
 ```
 
-## Setup Docker PostgreSQL
 
-```
-docker run --name postgresql -p 5432:5432 -d -v $PWD/postgres/data:/var/lib/postgresql sameersbn/postgresql:9.4
-docker exec -it postgresql sudo -u postgres createuser -P -d -r -s elixir
-docker exec -it postgresql sudo -u postgres createdb -O elixir agile_coach_campex_test
-docker exec -it postgresql sudo -u postgres createdb -O elixir agile_coach_campex_dev
-docker exec -it postgresql sudo -u postgres createdb -O elixir agile_coach_campex_prod
-```
 
-## Setup Semaphore deployment
+# Setup Semaphore deployment
+
+We are not using Semaphore deployment yet !!!
 
 ### Production secret config
 
@@ -106,11 +118,6 @@ MIX_ENV=prod mix phoenix.digest
 MIX_ENV=prod mix release
 scp -o StrictHostKeyChecking=no rel/agile_coach_campex/*.tar.gz root@app01.ringling.info:/root/deploys
 echo "Upgrade via ssh command"
-```
-
-## DB backup
-```
-docker exec -it postgresql sudo -u postgres pg_dump agile_coach_campex_prod > agile_coach_campex_prod_db.bak
 ```
 
 ## Build
