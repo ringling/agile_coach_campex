@@ -34,26 +34,28 @@ config :agile_coach_campex, :admin,
 
 # Installation
 
-http://www.phoenixframework.org/v1.1.4/docs/overview
+## Build Docker App image
 
-```bash
-# Note the new setup script name for Node.js v0.12
-curl -sL https://deb.nodesource.com/setup_0.12 | sudo bash -
+```
+cd acc_deploy/agile_coach_campex/
+git pull
+rm -rf node_modules/
+mix deps.clean --all
+docker build -t ringling/agile_coach_campex .
+```
 
-# Then install nodejs with:
-sudo apt-get install -y nodejs
 
-#Install brunch
-npm install -g brunch
+Before starting _app_ image, _postgresql_ image has to be running
 
-# Install inotify-tools
-sudo apt-get install inotify-tools
+```
+docker stop app && docker rm app
+docker run -p 8080:5000 -i  --link postgresql:elixir --name app -d ringling/agile_coach_campex
 ```
 
 ## Setup Docker PostgreSQL
 
 ```
-docker run --name postgresql -p 5432:5432 -d -v /<LOCALPATH>/postgres/data:/var/lib/postgresql sameersbn/postgresql:9.4
+docker run --name postgresql -p 5432:5432 -d -v $PWD/postgres/data:/var/lib/postgresql sameersbn/postgresql:9.4
 docker exec -it postgresql sudo -u postgres createuser -P -d -r -s elixir
 docker exec -it postgresql sudo -u postgres createdb -O elixir agile_coach_campex_test
 docker exec -it postgresql sudo -u postgres createdb -O elixir agile_coach_campex_dev
@@ -106,27 +108,12 @@ scp -o StrictHostKeyChecking=no rel/agile_coach_campex/*.tar.gz root@app01.ringl
 echo "Upgrade via ssh command"
 ```
 
-
-
-## Deploy
-
-```
-cd acc_deploy/agile_coach_campex/
-git pull
-docker build -t ringling/agile_coach_campex .
-docker stop app
-docker rm app
-docker run -p 80:8080 -i --link postgresql:elixir --name app -d ringling/agile_coach_campex
-```
-
 ## DB backup
 ```
 docker exec -it postgresql sudo -u postgres pg_dump agile_coach_campex_prod > agile_coach_campex_prod_db.bak
 ```
 
 ## Build
-
-`docker run -p 8080:8080 --link postgresql:elixir -it trenpixster/elixir /bin/bash`
 
 _build script_
 
@@ -145,6 +132,3 @@ MIX_ENV=prod mix release
 PORT=8080 rel/agile_coach_campex/bin/agile_coach_campex console
 PORT=8080 rel/agile_coach_campex/bin/agile_coach_campex foreground
 ```
-docker commit 109ff6d6fe34 app
-
-docker run app -p 8080:8080 --link postgresql:elixir -it /bin/bash
