@@ -10,7 +10,7 @@ Phoenix app, containing web site
 
 Remember to set these config variables in your prod.secret.exs
 
-```
+```elixir
 
 # Configure your database
 config :agile_coach_campex, AgileCoachCampex.Repo,
@@ -36,7 +36,7 @@ config :agile_coach_campex, :admin,
 
 ## Setup Docker PostgreSQL
 
-```
+```sh
 docker run --name postgresql -p 5432:5432 -d -v $PWD/postgres/data:/var/lib/postgresql sameersbn/postgresql:9.4
 docker exec -it postgresql sudo -u postgres createuser -P -d -r -s elixir
 docker exec -it postgresql sudo -u postgres createdb -O elixir agile_coach_campex_prod
@@ -47,13 +47,13 @@ docker exec -it postgresql sudo -u postgres createdb -O elixir agile_coach_campe
 In development mode you don't need `-v $PWD/postgres/data:/var/lib/postgresql`, unless you want to keep data between runs
 
 ### DB backup
-```
+```sh
 docker exec -it postgresql sudo -u postgres pg_dump agile_coach_campex_prod > agile_coach_campex_prod_db.bak
 ```
 
 ## Build App image
 
-```
+```sh
 cd acc_deploy/agile_coach_campex/
 git pull
 rm -rf node_modules/
@@ -65,7 +65,7 @@ docker build -t ringling/agile_coach_campex .
 
 Before starting the _app_ image, the _postgresql_ image has to be running
 
-```
+```sh
 docker stop app && docker rm app
 docker run -p 8080:5000 -i  --link postgresql:elixir --name app -d ringling/agile_coach_campex
 ```
