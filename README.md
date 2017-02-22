@@ -139,3 +139,18 @@ MIX_ENV=prod mix release
 PORT=8080 rel/agile_coach_campex/bin/agile_coach_campex console
 PORT=8080 rel/agile_coach_campex/bin/agile_coach_campex foreground
 ```
+
+# Update DO VPS
+
+Update dist and restart
+```bash
+$ sudo apt-get update
+$ sudo apt-get dist-upgrade
+$ sudo shutdown -r now
+```
+Start postgres and elixir
+
+```bash
+docker start postgresql
+docker start app
+```
