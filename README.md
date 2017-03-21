@@ -67,7 +67,7 @@ Before starting the _app_ image, the _postgresql_ image has to be running
 
 ```sh
 docker stop app && docker rm app
-docker run -p 8080:5000 -i  --link postgresql:elixir --name app -d ringling/agile_coach_campex
+docker run -p 80:5000 -i  --link postgresql:elixir --name app -d ringling/agile_coach_campex
 ```
 
 
