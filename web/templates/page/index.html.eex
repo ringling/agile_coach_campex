@@ -20,6 +20,11 @@
     <div class="box_cont">
       <div class="col-lg-6">
 
+       <h2>Signup opened for the 2017 ACCDK</h2>
+
+      <a target="_blank" href="https://www.eventbrite.com/e/accdk-2017-tickets-33038279383"> Signup here</a>
+
+      <!--
        <h2>Be the first to know</h2>
        <p>Get an email, when the sign-up opens for the <strong>Agile Coach Camp 2017</strong></p>
        <%= form_for @changeset, page_path(@conn, :create), fn f -> %>
@@ -41,7 +46,7 @@
            <%= submit "Submit", class: "btn btn-primary" %>
          </div>
        <% end %>
-
+      -->
       </div>
       <div class="col-lg-6">
         <div class="box">
