@@ -1,6 +1,6 @@
 <div class="well programs">
   <div class="well inner">
-    <h2>Program 2016</h2>
+    <h2>Program 2017</h2>
   </div>
 </div>
 
@@ -9,49 +9,55 @@
     <div class="box_cont">
       <div class="col-lg-4">
         <div class="well inner">
-          <h2>The 2nd</h2>
+          <h2>The 18th</h2>
           <ul class="list-unstyled">
             <li><b>16.00</b> Welcome - snacks and soda</li>
             <li><b>16.30</b> Opening & market place</li>
-            <li><b>18.00</b> Keynote</li>
-            <li><b>19.00</b> Sessions</li>
-            <li><b>20.00</b> Dinner</li>
-            <li>Hang out - all games and ideas are more than welcome</li>
+            <li><b>18.00-18.55</b> Session</li>
+            <li><b>19.05-19.55</b> Sessions</li>
+            <li><b>20.00-20.20</b> Output & presentation</li>
+            <li><b>20.25</b> Dinner</li>
+            <li>Yoga or ???</li>
           </ul>
         </div>
       </div>
       <div class="col-lg-4">
         <div class="well inner">
-          <h2>The 3rd</h2>
+          <h2>The 19th</h2>
           <ul class="list-unstyled">
-            <li><b>08.00</b> Good morning workout</li>
-            <li><b>09.00</b> Breakfast/shower</li>
-            <li><b>10.00</b> Market place</li>
-            <li><b>10.30-12.30</b> Sessions</li>
-            <li><b>12.30-13.30</b> lunch</li>
-            <li><b>13.30-14.30</b> Master Class on CD</li>
-            <li><b>14.45</b> Sessions</li>
-            <li><b>15:45</b> Sessions</li>
-            <li><b>16:45</b> Coffee/tea</li>
-            <li><b>17.00</b> Sessions</li>
-            <li><b>18.00-19.00</b> Get ready for Dinner</li>
-            <li><b>19.00</b> Dinner</li>
-            <li><b>22.00</b> Lots of fun - Surprise!</li>
+            <li><b>07.30</b> Good morning workout</li>
+            <li><b>08.30</b> Breakfast/shower</li>
+            <li><b>09.00</b> Market place</li>
+            <li><b>09.30-10.25</b> Sessions</li>
+            <li><b>10.30-11.25</b> Sessions</li>
+            <li><b>11.30-12.00</b> Output & presentations</li>
+            <li><b>12.00</b> Lunch</li>
+            <li><b>12.45-13.45</b> Sessions</li>
+            <li><b>13.50-14.45</b> Sessions</li>
+            <li><b>14.50-15.25</b> Sessions</li>
+            <li><b>15.30-16.00</b> Output & presentation</li>
+            <li><b>16:00</b> Coffee/tea</li>
+            <li><b>16.20-17.30</b> Sessions</li>
+            <li><b>17.35-18.25</b> Sessions</li>
+            <li><b>18.30-19.00</b> Output & presentation</li>
+            <li><b>19.30</b> Dinner</li>
+            <li><b>22.00</b> - What do you feel like… Bring games and ideas <i class="fa fa-smile-o"></i></li>
           </ul>
         </div>
       </div>
 
       <div class="col-lg-4">
         <div class="well inner">
-          <h2>The 4th</h2>
+          <h2>The 20th</h2>
           <ul class="list-unstyled">
-            <li><b>08.00</b> Good morning workout</li>
-            <li><b>09.00</b> Breakfast/shower</li>
-            <li><b>10.00</b> Look at Market place</li>
-            <li><b>10.30-11.30</b> Sessions</li>
-            <li><b>11.30-12.30</b> Sessions (Keynote close?)</li>
-            <li><b>12.30-13.30</b> Closing ACCDK 2016 - Group hug and goodbye or see you <i class="fa fa-smile-o"></i></li>
-            <li><b>13.30</b> Lunch</li>
+            <li><b>07.30</b> Good morning workout</li>
+            <li><b>08.30</b> Breakfast/shower</li>
+            <li><b>09.00</b> Look at Market place</li>
+            <li><b>09.30–10.25</b> Sessions</li>
+            <li><b>10.30-11.25</b> Sessions</li>
+            <li><b>11.30-12.00</b> Output & presentation</li>
+            <li><b>12.00</b> Closing ACCDK2016 - Group hug and goodbye or see you <i class="fa fa-smile-o"></i></li>
+            <li><b>13.30</b> Lunch for those who wants</li>
           </ul>
         </div>
       </div>
