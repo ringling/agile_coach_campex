@@ -15,6 +15,12 @@
         </div>
       </div>
 
+      <div class="col-lg-4">
+        <div class="well inner">
+          <img style="max-width: 200px" src="images/nordea-logo.png"/>
+        </div>
+      </div>
+
     </div>
   </div>
 
