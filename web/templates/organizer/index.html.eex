@@ -33,44 +33,6 @@
         <div class="box">
           <div class="row">
             <div class="org_cont_box">
-              <img class="org-image" src="/images/prof-ole.jpg">
-            </div>
-            <div class="org_cont_box">
-              <h2>Ole Jepsen</h2>
-              <ul class="list-unstyled">
-                <li>ole@goagile.dk</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-
-    </div>
-
-    <div class="box_cont">
-      <div class="org_box">
-        <div class="box">
-          <div class="row">
-            <div class="org_cont_box">
-              <img class="org-image" src="/images/prof-jenni.jpg">
-            </div>
-            <div class="org_cont_box">
-              <h2>Jenni Jepsen</h2>
-              <ul class="list-unstyled">
-                <li>jenni@goagile.dk</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-
-    </div>
-
-    <div class="box_cont">
-      <div class="org_box">
-        <div class="box">
-          <div class="row">
-            <div class="org_cont_box">
               <i class="fa fa-7 fa-user" style="font-size: 7em"></i>
             </div>
             <div class="org_cont_box">
@@ -82,6 +44,11 @@
           </div>
         </div>
       </div>
+
+    </div>
+
+
+    <div class="box_cont">
 
       <div class="org_box">
         <div class="box">
